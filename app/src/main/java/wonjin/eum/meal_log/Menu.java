@@ -12,5 +12,7 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.menu);
+
+        //add data
     }
 }

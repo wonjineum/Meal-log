@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "738474322489",
+    "project_id": "meal-log-77c85",
+    "storage_bucket": "meal-log-77c85.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738474322489:android:b0ca3caf740aed6c683be8",
+        "android_client_info": {
+          "package_name": "wonjin.eum.meal_log"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738474322489-r5f6ifsoqlc7t22ggkib087q8kmdetk8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "wonjin.eum.meal_log",
+            "certificate_hash": "04b07ebf7c1d5f9aa150949f9431d7ca9b480c0e"
+          }
+        },
+        {
+          "client_id": "738474322489-8tn88ur4isn3nupdq824e7evdcsn02bd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiBLTTgFkjZKhZ_egLk8Xlzg7io8nMNFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738474322489-8tn88ur4isn3nupdq824e7evdcsn02bd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
