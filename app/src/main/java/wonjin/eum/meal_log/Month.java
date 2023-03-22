@@ -1,6 +1,7 @@
 package wonjin.eum.meal_log;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.DatePicker;
 
 import androidx.annotation.Nullable;
@@ -14,13 +15,15 @@ public class Month extends AppCompatActivity {
         setContentView(R.layout.month);
 
         DatePicker datePicker = (DatePicker) findViewById(R.id.datePicker);
+        Button to2 =(Button) findViewById(R.id.calBtn);
         datePicker.init(2022, 12, 2, new DatePicker.OnDateChangedListener() {
             @Override
             public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                //code here
+                String date = String.valueOf(year) +" "+ String.valueOf(dayOfMonth);
+                to2.setText(date);
             }
         });
 
-        
+
     }
 }
