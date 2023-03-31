@@ -12,9 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Meallog"
-        <!--
 
-        -->
         tools:targetApi="31" >
 
         <activity android:name=".Splash"
@@ -55,6 +53,10 @@
 
         <activity android:name=".Points"
             android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
             </intent-filter>
