@@ -40,8 +40,8 @@ public class Stats extends AppCompatActivity {
 
                                 //textView에 data display
                                  Map display = document.getData();
-                                 String display2 = display.
-                                 tv1.setText(display);
+                                 String display2 = display.toString();
+                                 tv1.setText(display2);
                             }
                         } else {
                             Log.w("STATS >>>", "Error getting documents.", task.getException());
