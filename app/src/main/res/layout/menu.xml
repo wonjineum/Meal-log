@@ -14,6 +14,12 @@
         android:textColor="@color/white"
         android:textSize="30dp" />
 
+    <WebView
+        android:id="@+id/WebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--
     <TextView
         android:id="@+id/textView18"
         android:layout_width="match_parent"
@@ -57,4 +63,5 @@
         android:layout_marginTop="350dp"
         android:backgroundTint="@color/green"
         android:text="Submit" />
+        -->
 </LinearLayout>
