@@ -39,22 +39,7 @@ public class Amount extends AppCompatActivity {
         meal.put("date", "");
         //meal.put("dinner", "");
 
-        db.collection("meal")
-                .add(meal)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d("AMOUNT >>>", "DocumentSnapshot added with ID:" + documentReference.getId());
 
-                        String date = documentReference.getId();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.w("AMOUNT >>>", "Error adding document", e);
-                    }
-                });
 
         long mNow;
         Date mDate;
@@ -67,8 +52,22 @@ public class Amount extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it = new Intent(Amount.this, Month.class);
-                startActivity(it);
+                db.collection("meal")
+                        .add(meal)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Log.d("AMOUNT >>>", "DocumentSnapshot added with ID:" + documentReference.getId());
+
+                                String date = documentReference.getId(); //??
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w("AMOUNT >>>", "Error adding document", e);
+                            }
+                        });
             }
         });
 
