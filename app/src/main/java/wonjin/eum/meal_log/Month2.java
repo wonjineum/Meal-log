@@ -23,6 +23,7 @@ public class Month2 extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         //read data , users 를 meal 로 바꾸기
+
         db.collection("meal")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -30,14 +31,17 @@ public class Month2 extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                Log.d(TAG, document.getID()) + " => " + document.getData();
+                                Log.d("MONTH >>>", document.getId() + " => " + document.getData());
                             }
                         }
                         else {
-                            Log.w(TAG, "Error getting documents.", task.getException());
+                            Log.w("MONTH >>>", "Error getting documents.", task.getException());
                         }
                     }
                 });
+
+
+
 
     }
 }

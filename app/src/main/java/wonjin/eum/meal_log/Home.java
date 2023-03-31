@@ -15,6 +15,7 @@ public class Home extends AppCompatActivity {
 
         setContentView(R.layout.home);
 
+
         Button btn1 = findViewById(R.id.btn_calender);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +57,15 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent it = new Intent(Home.this, Stats.class);
+                startActivity(it);
+            }
+        });
+
+        Button btn6 = findViewById(R.id.btn_amount);
+        btn6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(Home.this, Amount.class);
                 startActivity(it);
             }
         });

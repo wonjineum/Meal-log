@@ -32,6 +32,14 @@
             android:layout_weight="1"
             android:backgroundTint="@color/purple"
             android:text="Profile" />
+
+        <Button
+            android:id="@+id/btn_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/purple"
+            android:text="Waste-log" />
     </LinearLayout>
 
     <LinearLayout
