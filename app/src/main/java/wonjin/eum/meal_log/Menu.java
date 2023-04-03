@@ -1,5 +1,7 @@
 package wonjin.eum.meal_log;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -26,19 +28,25 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Menu extends AppCompatActivity {
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
 
+
+
+   /*
         WebView myWebView = (WebView) findViewById(R.id.WebView);
         myWebView.loadUrl("https://stevensonschool.flikisdining.com/menu/stevenson-school");
         WebSettings webSettings = myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        myWebView.getSettings().setDomStorageEnabled(true);
         myWebView.setWebViewClient(new WebViewClient());
-        //read data
+           */
     }
 
+    /*
     private class WebViewClientClass extends WebViewClient {//페이지 이동
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest wrr) {
@@ -47,4 +55,6 @@ public class Menu extends AppCompatActivity {
             return true;
         }
     }
+    */
+
 }
