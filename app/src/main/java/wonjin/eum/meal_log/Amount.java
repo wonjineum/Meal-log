@@ -35,8 +35,22 @@ public class Amount extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         Map<String, Object> meal = new HashMap<>();
-        meal.put("waste_weight", "");
-        meal.put("date", "");
+        meal.put("waste_weight", "kjkj");
+        db.collection("meal").document("20230331")
+                .set(meal)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void unused) {
+                        Log.w("INPUT >>>", "success");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w("INPUT >>>", "Error adding document", e);
+                    }
+                });
+        // Log.w
         //meal.put("dinner", "");
 
 
@@ -52,14 +66,12 @@ public class Amount extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db.collection("meal")
-                        .add(meal)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                db.collection("meal").document("20230331")
+                        .set(meal)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
-                            public void onSuccess(DocumentReference documentReference) {
-                                Log.d("AMOUNT >>>", "DocumentSnapshot added with ID:" + documentReference.getId());
-
-                                String date = documentReference.getId(); //??
+                            public void onSuccess(Void unused) {
+                                Log.w("AMOUNT >>>", "success");
                             }
                         })
                         .addOnFailureListener(new OnFailureListener() {

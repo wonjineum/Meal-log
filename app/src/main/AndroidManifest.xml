@@ -16,6 +16,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31" >
 
+
         <activity android:name=".Splash"
             android:exported="true">
             <intent-filter>
