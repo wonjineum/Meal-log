@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textStyle="bold"
-        android:text="NUMBER" />
+        android:text="0" />
 
     <TextView
         android:id="@+id/textView15"
@@ -86,7 +86,7 @@
         android:text="* 1000 plates = 1 cupon" />
 
     <EditText
-        android:id="@+id/inputText"
+        android:id="@+id/edt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -101,14 +101,7 @@
         android:backgroundTint="@color/green"
         android:text="Submit" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="code" />
-    </com.google.android.material.textfield.TextInputLayout>
+
 </LinearLayout>
 </ScrollView>

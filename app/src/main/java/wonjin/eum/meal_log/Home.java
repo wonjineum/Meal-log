@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,9 +14,12 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.home);
 
+        TextView userId = findViewById(R.id.username);
+
+        String it = getIntent().getStringExtra("UID");
+        userId.setText(it);
 
         Button btn1 = findViewById(R.id.btn_calender);
         btn1.setOnClickListener(new View.OnClickListener() {
