@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -29,12 +30,14 @@ import java.util.Objects;
 public class Points extends AppCompatActivity {
     public String num;
     public String inputNum;
+    public String points;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.points);
 
+        String it = getIntent().getStringExtra("UID");
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         Button btn1 = findViewById(R.id.btn_submit2);
@@ -51,6 +54,37 @@ public class Points extends AppCompatActivity {
 
                 inputNum = '[' + edt.getText().toString() + ']'; //edittext text
                 Log.d("inputnum >>>", inputNum);
+                Log.d("document UID >>>", it);
+
+                db.collection("users").document(it)
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                if (task.isSuccessful()) {
+//                                    points = (String) document.get("points");
+                                    Log.d("GET >>>", task.toString());
+                                } else {
+                                    Log.w("GET >>>", "Error getting documents.", task.getException());
+                                }
+                            }
+                        });
+//                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                                if (task.isSuccessful()) {
+//                                    for (QueryDocumentSnapshot document : task.getResult()) {
+//                                        points = (String) document.get("points");
+//                                        Log.d("GET >>>", document.getId() + " => " + document.getData());
+//                                    }
+//                                } else {
+//                                    Log.w("GET >>>", "Error getting documents.", task.getException());
+//                                }
+//                            }
+//                        });
+
+
+
                 db.collection("verify")
                         .get()
                         .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
