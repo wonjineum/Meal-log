@@ -83,7 +83,7 @@
         android:textSize="20dp"
         android:background="@color/purple"
         android:textColor="@color/white"
-        android:text="* 1000 plates = 1 cupon" />
+        android:text="* 500 plates = 1 cupon" />
 
     <EditText
         android:id="@+id/edt"
