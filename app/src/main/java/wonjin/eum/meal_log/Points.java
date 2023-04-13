@@ -30,7 +30,6 @@ import java.util.Objects;
 public class Points extends AppCompatActivity {
     public String num;
     public String inputNum;
-    public String points;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,12 +40,10 @@ public class Points extends AppCompatActivity {
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
         Button btn1 = findViewById(R.id.btn_submit2);
-        TextView tv1 = findViewById(R.id.num);
+        TextView points = findViewById(R.id.num);
         EditText edt = findViewById(R.id.edt);
         //TextInputEditText edt1 = findViewById(R.id.btn_submit3);
         //define edittext object
-
-
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,16 +53,24 @@ public class Points extends AppCompatActivity {
                 Log.d("inputnum >>>", inputNum);
                 Log.d("document UID >>>", it);
 
-                db.collection("users").document(it)
+
+                db.collection("user").document(it)
                         .get()
                         .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                             @Override
                             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                                 if (task.isSuccessful()) {
-//                                    points = (String) document.get("points");
-                                    Log.d("GET >>>", task.toString());
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                        Object temp = document.get("points");
+                                        points.setText(String.valueOf(temp));
+                                        Log.d("GET >>>", temp.toString());
+                                    }
+
+                                    //points = (String) document.get("points");
+                                    //points.setText(String.valueOf(temp));
                                 } else {
-                                    Log.w("GET >>>", "Error getting documents.", task.getException());
+                                    Log.w("GET >>>", "Error inserting data.", task.getException());
                                 }
                             }
                         });
@@ -99,12 +104,13 @@ public class Points extends AppCompatActivity {
                                             break;
                                         }
 
+
                                         Log.d("num >>>", num);
                                         if (num.equals( inputNum)) {
                                             Log.d("IF >>>", "entered if statement");
-                                            Integer temp = Integer.parseInt((String) tv1.getText().toString())+1;
+                                            Integer temp = Integer.parseInt((String) points.getText().toString())+1;
                                             //+1 tv1.getText();
-                                            tv1.setText(String.valueOf(temp));
+                                            points.setText(String.valueOf(temp));
 
                                         }
 

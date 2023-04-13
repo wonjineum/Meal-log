@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -33,10 +34,20 @@ public class Amount extends AppCompatActivity {
 
         setContentView(R.layout.amount);
         FirebaseFirestore db = FirebaseFirestore.getInstance();
+        String it = getIntent().getStringExtra("UID");
+
+        long mNow;
+        Date mDate;
+        SimpleDateFormat mFormat = new SimpleDateFormat("yyyyMMdd");
+        Date currentDate = Calendar.getInstance().getTime();
+
+        EditText edt = findViewById(R.id.edt_amount);
+        Button btn1 = findViewById(R.id.btn_submit);
 
         Map<String, Object> meal = new HashMap<>();
-        meal.put("waste_weight", "kjkj");
-        db.collection("meal").document("20230331")
+        meal.put("waste_weight", "60");
+
+        db.collection("meal").document(it)
                 .set(meal)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -55,18 +66,14 @@ public class Amount extends AppCompatActivity {
 
 
 
-        long mNow;
-        Date mDate;
-        SimpleDateFormat mFormat = new SimpleDateFormat("yyyyMMdd");
-
-        Date currentDate = Calendar.getInstance().getTime();
 
 
-        Button btn1 = findViewById(R.id.btn_submit);
+
+
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db.collection("meal").document("20230331")
+                db.collection("meal").document("041223")
                         .set(meal)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -78,6 +85,21 @@ public class Amount extends AppCompatActivity {
                             @Override
                             public void onFailure(@NonNull Exception e) {
                                 Log.w("AMOUNT >>>", "Error adding document", e);
+                            }
+                        });
+
+                db.collection("meal")
+                        .add(Integer.valueOf())
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Log.d("WASTE >>>", "DocumentSnapshot added with ID: " + documentReference.getId());
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w("WASTE >>>", "Error adding document", e);
                             }
                         });
             }

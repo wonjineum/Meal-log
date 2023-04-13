@@ -71,6 +71,7 @@ public class Profile extends AppCompatActivity {
                 user.put("email", email);
                 user.put("password", password);
                 user.put("points", "0");
+                user.put("waste_weight", 0);
                 db.collection("user")
                         .add(user)
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
