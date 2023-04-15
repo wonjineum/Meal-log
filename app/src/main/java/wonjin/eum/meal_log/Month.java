@@ -1,6 +1,9 @@
 package wonjin.eum.meal_log;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
@@ -25,6 +28,14 @@ public class Month extends AppCompatActivity {
             public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
                 String date = String.valueOf(year) +" "+ String.valueOf(dayOfMonth);
                 to2.setText(date);
+            }
+        });
+
+        to2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(Month.this, Month2.class);
+                startActivity(it);
             }
         });
 

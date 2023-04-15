@@ -54,6 +54,7 @@ public class Points extends AppCompatActivity {
                 Log.d("document UID >>>", it);
 
 
+                /*
                 db.collection("user").document(it)
                         .get()
                         .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -74,6 +75,8 @@ public class Points extends AppCompatActivity {
                                 }
                             }
                         });
+
+                 */
 //                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
 //                            @Override
 //                            public void onComplete(@NonNull Task<QuerySnapshot> task) {

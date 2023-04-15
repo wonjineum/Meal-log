@@ -10,69 +10,81 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple"
+        android:background="@color/green"
         android:gravity="center"
-        android:text="February 20, 2023"
+        android:text="January 17, 2023"
         android:textColor="@color/white"
         android:textSize="30dp" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/textView22"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Breakfast"
-        android:textSize="20dp" />
-
-    <View
-        android:id="@+id/divider6"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/logo" />
+        android:textSize="20dp"
+        android:background="@color/purple"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="Stats" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textView14"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lunch"
-        android:textSize="20dp" />
-
-    <View
-        android:id="@+id/divider7"
-        android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/logo" />
+        android:textSize="30dp"
+        android:gravity="center"
+        android:text="Your food waste decreased by" />
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textView21"
+        android:layout_width="match_parent"
+        android:textSize="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="50 grams" />
+
+    <TextView
+        android:id="@+id/textView15"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dinner"
-        android:textSize="20dp" />
+        android:textSize="30dp"
+        android:gravity="center"
+        android:text="this day!" />
 
-    <View
-        android:id="@+id/divider8"
+    <TextView
+        android:id="@+id/textView29"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider" />
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:background="@color/purple"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="Waste weight" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/logo" />
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:text="Your waste weight was" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="match_parent"
+        android:textSize="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="100g" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:text="this day!" />
+
+
 </LinearLayout>

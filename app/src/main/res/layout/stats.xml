@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
-        android:text="Your food waste increased / decreased by" />
+        android:text="Your food waste decreased by" />
 
     <TextView
         android:id="@+id/textView21"
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textStyle="bold"
-        android:text="weight goes here" />
+        android:text="50 grams" />
 
     <TextView
         android:id="@+id/textView15"
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
-        android:text="this week!" />
+        android:text="compared to yesterday!" />
 
     <TextView
         android:id="@+id/textView23"
@@ -72,7 +72,7 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
-        android:text="Your clean plates saved food for" />
+        android:text="The amount of food you leftover could serve" />
 
 
     <TextView
@@ -82,7 +82,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textStyle="bold"
-        android:text="# of people goes here" />
+        android:text="2 people" />
 
     <TextView
         android:id="@+id/textView16"
@@ -90,7 +90,43 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:gravity="center"
-        android:text="people suffering from hunger!" />
+        android:text="suffering from hunger!" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:background="@color/purple"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:text="Environment" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:text="Your clean plates reduced" />
+
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="match_parent"
+        android:textSize="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="3 percent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:gravity="center"
+        android:text="of green house gas caused by food waste!" />
 
     <TextView
         android:id="@+id/display"
@@ -99,7 +135,7 @@
         android:textSize="30dp"
         android:gravity="center"
         android:padding="30dp"
-        android:text="display" />
+        android:text="" />
 
 </LinearLayout>
 

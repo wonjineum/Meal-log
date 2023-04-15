@@ -47,7 +47,7 @@ public class Amount extends AppCompatActivity {
         Map<String, Object> meal = new HashMap<>();
         meal.put("waste_weight", "60");
 
-        db.collection("meal").document(it)
+        db.collection("meal").document("20230331")
                 .set(meal)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -88,6 +88,7 @@ public class Amount extends AppCompatActivity {
                             }
                         });
 
+                /*
                 db.collection("meal")
                         .add(Integer.valueOf())
                         .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -102,6 +103,8 @@ public class Amount extends AppCompatActivity {
                                 Log.w("WASTE >>>", "Error adding document", e);
                             }
                         });
+
+                 */
             }
         });
 

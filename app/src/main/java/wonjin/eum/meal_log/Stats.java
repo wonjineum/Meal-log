@@ -39,9 +39,9 @@ public class Stats extends AppCompatActivity {
                                 Log.d("STATS >>>", document.getId() + " => " + document.getData());
 
                                 //textView에 data display
-                                 Map display = document.getData();
-                                 String display2 = display.toString();
-                                 tv1.setText(display2);
+                                 //Map display = document.getData();
+                                 //String display2 = display.toString();
+                                 //tv1.setText(display2);
                             }
                         } else {
                             Log.w("STATS >>>", "Error getting documents.", task.getException());
