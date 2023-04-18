@@ -14,7 +14,7 @@
         android:gravity="center"
         android:background="@color/purple"
         android:textColor="@color/white"
-        android:text="February's Meal-log" />
+        android:text="January's Meal-log" />
 
     <DatePicker
         android:id="@+id/datePicker"
